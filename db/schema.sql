@@ -4,6 +4,7 @@ DROP DATABASE IF EXISTS ecommerce_db;
 -- CREATE DATABASE
 CREATE DATABASE ecommerce_db;
 
+-- USE DATABSE
 USE ecommerce_db;
 
 CREATE TABLE category (
@@ -44,6 +45,22 @@ INSERT INTO tag (tag_name) VALUES
   ('Self-Help'),
   ('Fashion');
 
+  CREATE TABLE product_tag (
+  id INT NOT NULL AUTO_INCREMENT,
+  product_id INT,
+  tag_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (product_id) REFERENCES product(id),
+  FOREIGN KEY (tag_id) REFERENCES tag(id)
+);
+
+INSERT INTO product_tag (product_id, tag_id) VALUES
+  (1, 1),
+  (2, 2),
+  (3, 3);
+
+SELECT * FROM product_tag;
+
 -- SELECT * FROM category;
 -- SELECT * FROM product;
-SELECT * FROM tag;
+-- SELECT * FROM tag;

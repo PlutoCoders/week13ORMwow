@@ -1,32 +1,23 @@
-const { Tag } = require('../models');
+const { Tag, ProductTag, Product } = require(`../models`);
 
 const tagData = [
-  {
-    tag_name: 'rock music',
-  },
-  {
-    tag_name: 'pop music',
-  },
-  {
-    tag_name: 'blue',
-  },
-  {
-    tag_name: 'red',
-  },
-  {
-    tag_name: 'green',
-  },
-  {
-    tag_name: 'white',
-  },
-  {
-    tag_name: 'gold',
-  },
-  {
-    tag_name: 'pop culture',
-  },
+    { tag_name: 'Medieval'},
+    { tag_name: 'Self-Help'},
+    { tag_name: 'Fashion'},
 ];
+// ('Medieval'),
+// ('Self-Help'),
+// ('Fashion');
 
-const seedTags = () => Tag.bulkCreate(tagData);
+const productTagData = [
+    { product_id: 1, tag_id: 1 },
+    { product_id: 2, tag_id: 2 },
+    { product_id: 3, tag_id: 3 },
+  ];
 
-module.exports = seedTags;
+Tag.bulkCreate(tagData);
+ProductTag.bulkCreate(productTagData, {
+    include: [{ model: Product }]
+});
+
+module.exports = tagData;

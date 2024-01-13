@@ -33,5 +33,17 @@ INSERT INTO product (product_name, price, stock, category_id) VALUES
   ('How to Rule the World - For Dummies', 15, 10, 2),
   ('Wolf-Grey Jordan 5', 349.99, 3, 3);
 
+  CREATE TABLE tag (
+  id INT NOT NULL AUTO_INCREMENT,
+  tag_name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO tag (tag_name) VALUES
+  ('Medieval'),
+  ('Self-Help'),
+  ('Fashion');
+
 -- SELECT * FROM category;
-SELECT * FROM product;
+-- SELECT * FROM product;
+SELECT * FROM tag;

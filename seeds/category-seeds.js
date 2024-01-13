@@ -1,23 +1,11 @@
 const { Category } = require('../models');
-
+// Do not require category_id here as the primary key will automatically set the them each to their own unique ID's
 const categoryData = [
-  {
-    category_name: 'Shirts',
-  },
-  {
-    category_name: 'Shorts',
-  },
-  {
-    category_name: 'Music',
-  },
-  {
-    category_name: 'Hats',
-  },
-  {
-    category_name: 'Shoes',
-  },
+    { category_name: 'Toys' },
+    { category_name: 'Books' },
+    { category_name: 'Clothes' },
 ];
 
-const seedCategories = () => Category.bulkCreate(categoryData);
+Category.bulkCreate(categoryData);
 
-module.exports = seedCategories;
+module.exports = categoryData;

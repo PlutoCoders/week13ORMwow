@@ -1,5 +1,5 @@
-const router = express.Router();
 const express = require('express');
+const router = express.Router();
 const { getTags } = require('../../helper');
 const { Tag, ProductTag, Product } = require(`../../models`);
 

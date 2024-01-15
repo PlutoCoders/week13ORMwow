@@ -6,6 +6,14 @@ const productRoutes = require('./product-routes');
 const tagRoutes = require('./tag-routes');
 const productTagRoutes = require('./product-tag-routes');
 
+const { 
+    getTags, 
+    getCategories, 
+    getProductTags, 
+    getProducts, 
+    getCategoriesById 
+} = require('../../helper');
+
 router.use('/categories', categoryRoutes, async ( req, res ) => getCategories(req, res));
 
 router.use('/categories/:id', categoryRoutes, async ( req, res ) => getCategoriesById(req, res));

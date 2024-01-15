@@ -33,6 +33,19 @@ router.post(`/tags`, async ( req, res ) => {
     }
 });
 
+router.put(`/tags/:id`, async ( req, res ) => {
+    try{
+        const tagID = req.params.id;
+        const updatedTag = await Tag.update( req.body, {
+            where: { id: tagID },
+        });
+        res.status(200).json( updatedTag );
+    } catch (error) {
+        console.log('Could not update tag by ID:', error);
+    res.status(400).json({ error: 'make sure tag exists or data given is correct' });
+    }
+});
+
 router.delete(`/tags/:id`, async (req, res) => {
     try {
       const tagID = req.params.id;

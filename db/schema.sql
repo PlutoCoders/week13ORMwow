@@ -59,8 +59,7 @@ INSERT INTO product_tag (product_id, tag_id) VALUES
   (2, 2),
   (3, 3);
 
-SELECT * FROM product_tag;
-
 -- SELECT * FROM category;
 -- SELECT * FROM product;
 -- SELECT * FROM tag;
+-- SELECT * FROM product_tag;

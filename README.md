@@ -5,7 +5,7 @@ Object-Relational Mapping (ORM) Challenge: E-commerce Back End
 In this assignment, the goal is to take a working Express.js API and configure it to use Sequelize to interact with a MySQL database.
 
 ## Links
-- Repo Link:
+- Repo Link: https://github.com/PlutoCoders/week13ORMwow
 - Walkthrough video Link:
 
 ## Credits

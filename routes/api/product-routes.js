@@ -40,7 +40,7 @@ router.put(`/products/:id`, async ( req, res ) => {
         const updatedProduct = await Product.update(req.body, {
             where: { id: productID },
         });
-        res.status(200).json( updatedProduct );
+        res.status(200).json( {updatedProduct, message: `Sucessfully Updated Product`} );
     } catch (error) {
         console.log(`error updating product via id:`, error);
         res.status(400).json({ error: `invalid data provided or product does not exist` });

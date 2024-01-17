@@ -7,6 +7,10 @@ In this assignment, the goal is to take a working Express.js API and configure i
 ## Links
 - Repo Link: https://github.com/PlutoCoders/week13ORMwow
 - Walkthrough video Link:
+[Walkthrough Video Link here!](https://drive.google.com/file/d/1qczY0ZfqduyhlUaZjCPFxFonlEcM5KLH/view)
+
+## Image of Insomnia
+![Alt Text](/Assets/week%2013%20repo%20image.webp)
 
 ## To start the server
 - in terminal write node server.js

@@ -8,6 +8,9 @@ In this assignment, the goal is to take a working Express.js API and configure i
 - Repo Link: https://github.com/PlutoCoders/week13ORMwow
 - Walkthrough video Link:
 
+## To start the server
+- in terminal write node server.js
+
 ## Credits
 - Massive thanks to my brother Furk who is in the same course with me
 - These database related assignments were a nightmare, and i couldn't have done it without his close assistance!
